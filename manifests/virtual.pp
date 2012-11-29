@@ -24,15 +24,19 @@ class packages::virtual {
     package => $packages::names::bash_completion,
   }
 
-  @packages::package { 'vim':
-    package => $packages::names::vim,
-  }
-
   @packages::package { 'dnsutils':
     package => $packages::names::dnsutils,
   }
 
+  @packages::package { 'man':
+    package => $packages::names::man,
+  }
+
   @packages::package { 'tree':
     package => $packages::names::tree,
+  }
+
+  @packages::package { 'vim':
+    package => $packages::names::vim,
   }
 }

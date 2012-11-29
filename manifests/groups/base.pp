@@ -17,7 +17,8 @@ class packages::groups::base {
 
   Packages::Package <| title == 'bash' |>
   Packages::Package <| title == 'bash-completion' |>
-  Packages::Package <| title == 'vim' |>
   Packages::Package <| title == 'dnsutils' |>
+  Packages::Package <| title == 'man' |>
   Packages::Package <| title == 'tree' |>
+  Packages::Package <| title == 'vim' |>
 }

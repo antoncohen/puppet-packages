@@ -30,27 +30,33 @@ class packages::names {
     default => undef,
   }
 
-  $git = $::osfamily ? {
-    RedHat => 'git',
-    Debian => 'git',
-    default => undef,
-  }
-
-  $vim = $::osfamily ? {
-    RedHat => 'vim-enhanced',
-    Debian => 'vim',
-    default => undef,
-  }
-
   $dnsutils = $::osfamily ? {
     RedHat => 'bind-utils',
     Debian => 'dnsutils',
     default => undef,
   }
 
+  $git = $::osfamily ? {
+    RedHat => 'git',
+    Debian => 'git',
+    default => undef,
+  }
+
+  $man = $::osfamily ? {
+    RedHat => ['man', 'man-pages', 'man-pages-overrides'],
+    Debian => ['manpages', 'man-db'],
+    default => undef,
+  }
+
   $tree = $::osfamily ? {
     RedHat => 'tree',
     Debian => 'tree',
+    default => undef,
+  }
+
+  $vim = $::osfamily ? {
+    RedHat => 'vim-enhanced',
+    Debian => 'vim',
     default => undef,
   }
 }
