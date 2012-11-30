@@ -26,9 +26,8 @@ define packages::package(
   $package=undef) {
 
   if $package {
-    package { "$package":
+    package { $package:
       ensure => $ensure,
-      alias => $name,
     }
   }
 }
